@@ -10,7 +10,7 @@
       @click.native="$store.dispatch('commitActiveDrawer', { core: 'rooms', sub: 'all' })"
     />
     <IconButton
-      v-for="category in Object.keys(rooms)"
+      v-for="category in Object.keys(rooms())"
       :key="category"
       :icon="category"
       :class="{

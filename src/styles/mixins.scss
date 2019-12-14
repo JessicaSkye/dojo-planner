@@ -3,3 +3,20 @@
 @mixin noselect() {
     user-select: none;
 }
+
+// ----------------------------------------------
+// SCROLLBAR ------------------------------------
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+      background: $bg-4;
+      transition: background 0.1s ease;
+      border-radius: 4px 0 0 4px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+      background: lighten($bg-4,25%);
+  }
+}

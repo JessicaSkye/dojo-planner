@@ -11,8 +11,9 @@ export default new Vuex.Store({
     rooms: Rooms
   },
   getters: {
-    rooms: state => {
-      return state.rooms
+    rooms: (state) => (category) => {
+      if (!category || category === 'all') return state.rooms
+      else return state.rooms[category]
     }
   },
   mutations: {

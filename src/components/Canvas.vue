@@ -1,3 +1,8 @@
+<!--
+  TODO ==============================
+  FIX SCROLLING SENSITIVTY IN FIREFOX
+-->
+
 <template>
 <div
   id="canvas"

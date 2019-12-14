@@ -1,6 +1,11 @@
 <template>
 <div id="header">
-  <IconButton type="uni" icon="bars" />
+  <IconButton
+    type="uni"
+    icon="bars"
+    @click.native="$store.dispatch('commitActiveDrawer', 'menu')"
+    :class="{'-active': $store.state.activeDrawer === 'menu' }"
+  />
   <p class="title">Warframe Dojo Planner</p>
 
   <div class="nav">
@@ -34,7 +39,7 @@ export default {
 
 <style lang="scss">
 #header {
-  grid-column-start: span 2;
+  grid-column-start: span 3;
 
   background: $bg-4;
   width: 100%;

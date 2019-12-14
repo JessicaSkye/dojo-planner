@@ -29,33 +29,33 @@ export default {
 
 <style lang="scss">
 .icon-btn {
+  position: relative;
   padding: 20px;
   width: auto;
   height: 24px;
+  @include noselect();
 
   cursor: pointer;
-  &:hover { background: $bg-2; }
+  &:hover { background: $bg-4; }
 
   &:after {
     content: '';
     position: absolute;
     top: 32px;
     left: 0;
-    height: 0%;
+    height: 0px;
+    width: 4px;
     border-radius: 0 4px 4px 0;
+    background: white;
     transition: 0.15s ease;
   }
 
   &.-active {
-    position: relative;
-    background: $bg-4;
+    background: $bg-2;
     &:after {
       content: '';
-      position: absolute;
       top: 0;
-      width: 4px;
-      height: 100%;
-      background: white;
+      height: 64px;
     }
   }
 }

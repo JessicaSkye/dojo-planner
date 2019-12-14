@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss">
 #status-bar {
-  grid-column-start: span 2;
+  grid-column-start: span 3;
 
   background: $bg-4;
   width: 100%;

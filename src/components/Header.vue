@@ -3,8 +3,8 @@
   <IconButton
     type="uni"
     icon="bars"
-    @click.native="$store.dispatch('commitActiveDrawer', 'menu')"
-    :class="{'-active': $store.state.activeDrawer === 'menu' }"
+    :class="{'-active': $store.state.activeDrawer.core === 'menu' }"
+    @click.native="$store.dispatch('commitActiveDrawer', { core: 'menu' })"
   />
   <p class="title">Warframe Dojo Planner</p>
 

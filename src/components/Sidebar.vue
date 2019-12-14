@@ -3,22 +3,36 @@
   <div class="rooms">
     <IconButton
       icon="all"
-      :class="{'-active': $store.state.activeDrawer === 'all'}"
-      @click.native="$store.dispatch('commitActiveDrawer', 'all')"
+      :class="{
+        '-active':
+          $store.state.activeDrawer.core === 'rooms' && $store.state.activeDrawer.sub === 'all'
+      }"
+      @click.native="$store.dispatch('commitActiveDrawer', { core: 'rooms', sub: 'all' })"
     />
     <IconButton
       v-for="category in Object.keys(rooms)"
       :key="category"
       :icon="category"
-      :class="{'-active': $store.state.activeDrawer === category}"
-      @click.native="$store.dispatch('commitActiveDrawer', category)"
+      :class="{
+        '-active':
+          $store.state.activeDrawer.core === 'rooms' && $store.state.activeDrawer.sub === category
+      }"
+      @click.native="$store.dispatch('commitActiveDrawer', { core: 'rooms', sub: category })"
+    />
+
+    <div class="divider"></div>
+
+    <IconButton
+      icon="resource"
+      :class="{'-active': $store.state.activeDrawer.core === 'resources'}"
+      @click.native="$store.dispatch('commitActiveDrawer', { core: 'resources' })"
     />
   </div>
   <IconButton
     type="uni"
     icon="cog"
-    :class="{'-active': $store.state.activeDrawer === 'settings'}"
-    @click.native="$store.dispatch('commitActiveDrawer', 'settings')"
+    :class="{'-active': $store.state.activeDrawer.core === 'settings'}"
+    @click.native="$store.dispatch('commitActiveDrawer', { core: 'settings' })"
   />
 </div>
 </template>
@@ -42,5 +56,13 @@ export default {
 
   display: grid;
   grid-template-rows: auto 64px;
+
+  .divider {
+    height: 2px;
+    width: 56px;
+    border-radius: 4px;
+    background: $bg-4;
+    margin: 8px auto;
+  }
 }
 </style>

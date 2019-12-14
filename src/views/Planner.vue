@@ -2,7 +2,7 @@
 <div
   id="planner"
   class="view"
-  :class="{'-opendrawer': $store.state.activeDrawer}"
+  :class="{'-opendrawer': $store.state.activeDrawer.core}"
 >
   <Header />
   <Sidebar />

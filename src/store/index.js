@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeDrawer: null,
+    activeDrawer: { core: null },
     rooms: Rooms
   },
   getters: {
@@ -17,13 +17,16 @@ export default new Vuex.Store({
   },
   mutations: {
     setActiveDrawer (state, payload) {
-      if (state.activeDrawer === payload) state.activeDrawer = null
+      if (JSON.stringify(state.activeDrawer) === JSON.stringify(payload)) state.activeDrawer = { core: null }
       else state.activeDrawer = payload
     }
   },
   actions: {
     commitActiveDrawer (context, data) {
       context.commit('setActiveDrawer', data)
+    },
+    clearDrawer (context, data) {
+      context.commit('setActiveDrawer', { core: null })
     }
   },
   modules: {

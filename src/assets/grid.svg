@@ -1,0 +1,5 @@
+<svg width="130" height="130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path stroke="#2B333B" stroke-width="2" d="M1 97h32v32H1zm0-32h32v32H1zm32 32h32v32H33zm0-32h32v32H33zM1 33h32v32H1zM1 1h32v32H1zm32 32h32v32H33zm0-32h32v32H33zm32 96h32v32H65zm0-32h32v32H65zm32 32h32v32H97zm0-32h32v32H97zM65 33h32v32H65zm0-32h32v32H65zm32 32h32v32H97zm0-32h32v32H97z"/>
+  <path stroke="#364049" stroke-width="2" d="M1 65h64v64H1zM1 1h64v64H1zm64 64h64v64H65zm0-64h64v64H65z"/>
+  <path stroke="#414D58" stroke-width="2" d="M1 1h128v128H1z"/>
+</svg>

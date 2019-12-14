@@ -10,6 +10,16 @@ const routes = [
     component: () => import('../views/Home.vue')
   },
   {
+    path: '/d/:id',
+    name: 'planner',
+    component: () => import('../views/Planner.vue')
+  },
+  {
+    path: '/changelog',
+    name: 'changelog',
+    component: () => import('../views/Changelog.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../views/About.vue')

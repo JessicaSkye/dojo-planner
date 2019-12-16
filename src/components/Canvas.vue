@@ -10,6 +10,7 @@
   @mousedown.middle="panning = true"
   @mouseup.middle="panning = false"
   @mousemove="moveView"
+
   @wheel="zoomView"
 
   :class="{'-panning': panning}"
@@ -26,14 +27,23 @@
       transform: `translate(-50%,-50%) scale(${zoom})`
     }"
   >
-
+    <CanvasTile
+      v-for="(tile, i) in dojo.rooms"
+      :key="i"
+      v-model="dojo.rooms[i]"
+    />
   </div>
 </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
+import CanvasTile from '@/components/CanvasTile.vue'
+
 export default {
   name: 'Canvas',
+  components: { CanvasTile },
   data () {
     return {
       panning: false,
@@ -57,6 +67,7 @@ export default {
       this.zoom = Math.min(Math.max(this.zoom + (-e.deltaY / 100) * this.zoomSensitivity, this.zoomMin), this.zoomMax)
     }
   },
+  computed: { ...mapGetters(['dojo']) },
   mounted () {
     // Center Viewport on Load
     this.x = this.$el.offsetWidth / 2
@@ -84,8 +95,6 @@ export default {
 
     position: absolute;
     transform: translate(-50%,-50%);
-
-    background: $bg-2;
 
     transition: transform 0.15s ease;
   }

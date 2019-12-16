@@ -56,10 +56,9 @@ export default {
 <style lang="scss">
 .canvas-tile {
   position: absolute;
+  line-height: 0;
 
-  &.-dragging {
-    z-index: 9999;
-  }
+  &.-dragging { z-index: 9999; }
 
   cursor: grab;
   &:hover { background: rgba($bg-4, 0.5); }

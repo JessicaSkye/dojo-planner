@@ -36,6 +36,7 @@ export default {
     multiple (n, m) {
       return Math.ceil(n / m) * m
     },
+
     moveTile (e) {
       if (this.moving) {
         this.value.x = (this.value.x + e.movementX)
@@ -58,7 +59,10 @@ export default {
   position: absolute;
   line-height: 0;
 
-  &.-dragging { z-index: 9999; }
+  &.-dragging {
+    z-index: 9999;
+    cursor: grabbing;
+  }
 
   cursor: grab;
   &:hover { background: rgba($bg-4, 0.5); }

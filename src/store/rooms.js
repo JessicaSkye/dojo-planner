@@ -9,7 +9,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     autumn_garden: {
       capacity: -10,
@@ -20,7 +21,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     wooden_sand_garden: {
       capacity: -10,
@@ -31,7 +33,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     equinox_garden: {
       capacity: -10,
@@ -42,7 +45,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     humilitas_garden: {
       capacity: -10,
@@ -53,7 +57,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     industria_garden: {
       capacity: -10,
@@ -64,7 +69,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     castitas_garden: {
       capacity: -10,
@@ -75,7 +81,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
     aestas_garden: {
       capacity: -10,
@@ -86,7 +93,8 @@ export default {
         ferrite: 550,
         nano_spores: 2000,
         forma: 1
-      }
+      },
+      image: 'garden_small'
     },
 
     soleto_garden: {
@@ -98,7 +106,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     mosaic_garden: {
       capacity: -15,
@@ -109,7 +118,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     junno_water_garden: {
       capacity: -15,
@@ -120,7 +130,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     leto_garden: {
       capacity: -15,
@@ -131,7 +142,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     vosen_water_garden: {
       capacity: -15,
@@ -142,7 +154,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     caritas_water_garden: {
       capacity: -15,
@@ -153,7 +166,8 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     },
     temperantia_water_garden: {
       capacity: -15,
@@ -164,11 +178,12 @@ export default {
         ferrite: 750,
         nano_spores: 2500,
         forma: 1
-      }
+      },
+      image: 'garden_large'
     }
   },
   lab: {
-    oracle_room: {
+    oracle_lab: {
       capacity: -2,
       energy: -5,
       resources: {
@@ -328,7 +343,7 @@ export default {
         forma: 1
       }
     },
-    t_shaped: {
+    t_shape: {
       capacity: -5,
       energy: -3,
       resources: {

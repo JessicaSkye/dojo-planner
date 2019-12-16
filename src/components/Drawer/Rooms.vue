@@ -17,7 +17,9 @@
           class="room-tile"
         >
           <div class="tile">
-            <div class="preview"></div>
+            <div class="preview">
+              <img :src="getTileSVG(rkey, r)">
+            </div>
             <div class="title">{{ rkey.replace(/_/g, ' ') }}</div>
           </div>
         </div>
@@ -34,7 +36,9 @@
         class="room-tile"
       >
         <div class="tile">
-          <div class="preview"></div>
+          <div class="preview">
+            <img :src="getTileSVG(rkey, r)">
+          </div>
           <div class="title">{{ rkey.replace(/_/g, ' ') }}</div>
         </div>
       </div>
@@ -62,6 +66,15 @@ export default {
       search: ''
     }
   },
+  methods: {
+    getTileSVG (name, tile) {
+      try {
+        return tile.image ? require(`../../assets/room/${tile.image}.svg`) : require(`../../assets/room/${name}.svg`)
+      } catch {
+        return ''
+      }
+    }
+  },
   computed: { ...mapGetters(['rooms']) }
 }
 </script>
@@ -72,7 +85,7 @@ export default {
     height: calc(100vh - 214px);
     overflow-y: auto;
     @include scrollbar();
-  margin: 16px 0;
+    margin: 16px 0;
   }
 
   .category {
@@ -108,6 +121,12 @@ export default {
         height: 128px;
         background: $bg-1;
         border-radius: 4px;
+        > img {
+          margin: auto;
+          display: block;
+          max-width: 128px;
+          max-height: 128px;
+        }
       }
 
       > .title {
